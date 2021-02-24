@@ -10,6 +10,8 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+
+
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -60,7 +62,15 @@ function Navbar() {
                 Products
               </Link>
             </li>
-
+            <li className='nav-item'>
+              <Link
+                to='/user-form'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                User Form
+              </Link>
+            </li>
             <li>
               <Link
                 to='/sign-up'
@@ -70,8 +80,18 @@ function Navbar() {
                 Sign Up
               </Link>
             </li>
+            <li>
+              <Link
+                to='/login-up'
+                className='nav-links-mobile'
+                onClick={closeMobileMenu}
+              >
+                Login Up
+              </Link>
+            </li>
           </ul>
           {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+           <Button buttonStyle='btn--outline'>LOGIN UP</Button>
         </div>
       </nav>
     </>
