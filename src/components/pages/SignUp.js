@@ -1,6 +1,9 @@
 import React from 'react';
 import "../../App.css";
+import SingUp from '../SingUp';
 
-export default function SignUp(){
-    return <h1 className='sign-up'>SignUp</h1>
+function UserForm(){
+    return <SingUp/>
 }
+
+export default UserForm;
